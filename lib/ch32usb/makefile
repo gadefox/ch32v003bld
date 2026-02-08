@@ -1,0 +1,8 @@
+CH32USBDIR := $(dir $(lastword $(MAKEFILE_LIST)))
+CH32USBSRCS := $(wildcard $(CH32USBDIR)src/*.c)
+CH32USBASMS := $(wildcard $(CH32USBDIR)src/*.S)
+CH32USBINC := -I$(CH32USBDIR)src
+
+SRCS += $(CH32USBSRCS)
+ASMS += $(CH32USBASMS)
+INC += $(CH32USBINC)
